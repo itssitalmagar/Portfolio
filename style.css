@@ -173,7 +173,8 @@
             background: linear-gradient(rgba(54, 118, 181, 0.5), rgba(22, 13, 13, 0.5)), url('/api/placeholder/1200/800') center/cover no-repeat;
 
         }
-        .contact-content-new{
+
+        .contact-content-new {
             color: var(--secondary-color);
             text-align: center;
         }
@@ -192,15 +193,20 @@
 
         .about-image {
             flex: 1;
-            min-width: 300px;
+            min-width: 100px;
+            /* width: 250px;
+            height: 250px; */
             border-radius: 10px;
             overflow: hidden;
+            aspect-ratio: 1/1;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .about-image img {
+            /* scale: 10%; */
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             transition: var(--transition);
         }
 
@@ -231,7 +237,7 @@
             /* background-color: var(--light-black); */
             /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
             background: linear-gradient(rgba(54, 118, 181, 0.5), rgba(22, 13, 13, 0.5)), url('/api/placeholder/1200/800') center/cover no-repeat;
-            
+
         }
 
         .gallery-container {
@@ -294,89 +300,90 @@
         }
 
         .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
 
-.social-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #4267B2, #8b5cf6);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.8rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-}
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4267B2, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
 
-.social-icon::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s;
-}
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
 
-.social-icon:hover::before {
-    left: 100%;
-}
+        .social-icon:hover::before {
+            left: 100%;
+        }
 
-.social-icon:hover {
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
+        .social-icon:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
 
-/* Specific colors for different social platforms */
-.social-icon[title="Facebook"]:hover {
-    background: linear-gradient(135deg, #4267B2, #365899);
-}
+        /* Specific colors for different social platforms */
+        .social-icon[title="Facebook"]:hover {
+            background: linear-gradient(135deg, #4267B2, #365899);
+        }
 
-.social-icon[title="Instagram"]:hover {
-    background: linear-gradient(135deg, #E4405F, #F56040, #FCAF45);
-}
+        .social-icon[title="Instagram"]:hover {
+            background: linear-gradient(135deg, #E4405F, #F56040, #FCAF45);
+        }
 
-.social-icon[title="Telegram"]:hover {
-    background: linear-gradient(135deg, #0088cc, #229ED9);
-}
+        .social-icon[title="Telegram"]:hover {
+            background: linear-gradient(135deg, #0088cc, #229ED9);
+        }
 
-/* Responsive design for social links */
-@media screen and (max-width: 768px) {
-    .social-links {
-        gap: 20px;
-        margin-top: 30px;
-    }
-    
-    .social-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-}
+        /* Responsive design for social links */
+        @media screen and (max-width: 768px) {
+            .social-links {
+                gap: 20px;
+                margin-top: 30px;
+            }
 
-@media screen and (max-width: 480px) {
-    .social-links {
-        gap: 15px;
-        margin-top: 25px;
-    }
-    
-    .social-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-}
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .social-links {
+                gap: 15px;
+                margin-top: 25px;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+
         /* .social-links {
             display: flex;
             justify-content: center;
@@ -451,7 +458,8 @@
             .nav-links li {
                 margin: 0 10px;
             }
- }
- .h2{
-    color: white;
- }
+        }
+
+        .h2 {
+            color: white;
+        }
