@@ -344,19 +344,12 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        /* Specific colors for different social platforms */
-        .social-icon[title="Facebook"]:hover {
-            background: linear-gradient(135deg, #4267B2, #365899);
+        .social-icon:hover i {
+            color: #000000;
         }
-
-        .social-icon[title="Instagram"]:hover {
-            background: linear-gradient(135deg, #E4405F, #F56040, #FCAF45);
+        .social-icon i {
+            transition: color 0.3s ease;
         }
-
-        .social-icon[title="Telegram"]:hover {
-            background: linear-gradient(135deg, #0088cc, #229ED9);
-        }
-
         /* Responsive design for social links */
         @media screen and (max-width: 768px) {
             .social-links {
